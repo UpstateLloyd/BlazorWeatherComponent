@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vZ8RpDChc71VVsMzCYI/lXXXeDBr37vuR57eXF1f0hMxPjObdFF1ZKcu38L3Z9DSi5HS9OeK46dBPOs901WEgA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\WeatherAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lhotchkiss\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\lhotchkiss\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512"
+  ],
+  "logs": []
+}

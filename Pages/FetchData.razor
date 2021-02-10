@@ -1,0 +1,44 @@
+@page "/fetchdata"
+@using WeatherAPI.Models 
+@using WeatherAPI.Data
+
+@if (forecast == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    if (forecast.properties != null)
+    {
+        if (forecast.properties.periods != null)
+        {
+            @foreach (var forecastobject in forecast.properties.periods)
+            {
+                
+                <p> Name: @forecastobject.name </p>
+                <p> Start Time: @forecastobject.startTime </p>
+                <p> End Time: @forecastobject.endTime </p>
+                <p> Is Daytime?:@forecastobject.isDaytime </p>
+                <p> Temp: @forecastobject.temperature @forecastobject.temperatureUnit</p>   
+                <p> Wind Speed: @forecastobject.windSpeed </p>
+                <p> Wind Direction: @forecastobject.windDirection </p>
+                <p> Icon: @forecastobject.icon </p>
+                <p> Short Forecast: @forecastobject.shortForecast </p>
+                <p> Detailed Forecast: @forecastobject.detailedForecast </p>
+            }
+        }
+    }
+}
+
+
+@code {
+
+    ForecastModel forecast = new ForecastModel();
+    ForecastService forecastService = new ForecastService();
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecast = await forecastService.GetForecastAsync();
+    }
+
+}
