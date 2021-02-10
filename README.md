@@ -1,4 +1,4 @@
-# WeatherAPI
+# Blazor Weather Component
 Blazor component serving National weather service API response into pure HTML/CSS card.
 
 HTML/CSS card from Aditya Bhandari
