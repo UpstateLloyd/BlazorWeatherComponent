@@ -1,2 +1,2 @@
 # WeatherAPI
-Blazor component wrapping serving National weather service API into frontend HTML/CSS card
+Blazor component serving National weather service API response into pure HTML/CSS card.
