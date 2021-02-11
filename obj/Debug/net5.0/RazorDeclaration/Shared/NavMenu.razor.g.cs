@@ -13,70 +13,70 @@ namespace WeatherAPI.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 1 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 2 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 3 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 4 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 5 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 6 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 7 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 8 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 9 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using WeatherAPI;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "/home/upstatelloyd/Projects/BlazorWeatherComponent/_Imports.razor"
+#line 10 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
 using WeatherAPI.Shared;
 
 #line default
@@ -90,7 +90,7 @@ using WeatherAPI.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "/home/upstatelloyd/Projects/BlazorWeatherComponent/Shared/NavMenu.razor"
+#line 28 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

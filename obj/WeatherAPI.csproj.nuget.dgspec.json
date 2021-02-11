@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/upstatelloyd/Projects/BlazorWeatherComponent/WeatherAPI.csproj": {}
+    "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\WeatherAPI.csproj": {}
   },
   "projects": {
-    "/home/upstatelloyd/Projects/BlazorWeatherComponent/WeatherAPI.csproj": {
+    "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\WeatherAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/upstatelloyd/Projects/BlazorWeatherComponent/WeatherAPI.csproj",
+        "projectUniqueName": "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\WeatherAPI.csproj",
         "projectName": "WeatherAPI",
-        "projectPath": "/home/upstatelloyd/Projects/BlazorWeatherComponent/WeatherAPI.csproj",
-        "packagesPath": "/home/upstatelloyd/.nuget/packages/",
-        "outputPath": "/home/upstatelloyd/Projects/BlazorWeatherComponent/obj/",
+        "projectPath": "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\WeatherAPI.csproj",
+        "packagesPath": "C:\\Users\\lhotchkiss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/upstatelloyd/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\lhotchkiss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
