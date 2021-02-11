@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "vZ8RpDChc71VVsMzCYI/lXXXeDBr37vuR57eXF1f0hMxPjObdFF1ZKcu38L3Z9DSi5HS9OeK46dBPOs901WEgA==",
+  "dgSpecHash": "N9WDQr8znpb8Zwx6Cqh0/eKnvOvyMwFzn2DrjgSm0M995aK9dZlE/CnQvGR4QnIO3bk2TCksu7wh46w+4rg1vw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\WeatherAPI.csproj",
+  "projectFilePath": "/home/upstatelloyd/Projects/BlazorWeatherComponent/WeatherAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lhotchkiss\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\lhotchkiss\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512"
+    "/home/upstatelloyd/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/home/upstatelloyd/.nuget/packages/restsharp/106.11.7/restsharp.106.11.7.nupkg.sha512"
   ],
   "logs": []
 }
