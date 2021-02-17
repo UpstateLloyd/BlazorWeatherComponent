@@ -12,7 +12,7 @@ namespace WeatherAPI.Models
       {
         { "Mostly Cloudy","wi-day-cloudy" },{ "Mostly Cloudy with Haze","wi-day-cloudy" },
         { "Mostly Cloudy and Breezy","wi-day-cloudy" },{ "Fair","wi-day-sunny" },
-        { "Clear","wi-day-sunny" },{ "Fair and Breezy","wi-day-sunny" },
+        { "Clear","wi-day-sunny" },{ "Fair and Breezy","wi-day-sunny" },{ "Mostly Sunny","wi-day-cloudy" },
         { "Clear and Breezy","wi-day-sunny" },{ "Rain","wi-day-rain" },{ "Partly Sunny","wi-day-cloudy" },
         { "Heavy Rain","wi-day-rain" },{ "Rain Fog","wi-day-rain" },{ "Heavy Rain Fog","wi-day-rain" },
         { "Heavy Rain Showers Fog/Mist","wi-day-rain" },{ "Heavy Showers Rain Fog/Mist","wi-day-rain" },
