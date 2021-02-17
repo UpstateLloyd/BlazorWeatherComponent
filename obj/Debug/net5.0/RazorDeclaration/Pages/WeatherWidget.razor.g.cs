@@ -112,17 +112,18 @@ using System.Text;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\WeatherWidget.razor"
+#line 30 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\WeatherWidget.razor"
        
 
     ForecastModel forecast = new ForecastModel();
     ForecastService forecastService = new ForecastService();
+    WeatherDefinitions iconClass = new WeatherDefinitions();
 
-    string isDay = "day";
+    //string isDay = "day";
     string temp = "Loading" ;
     string tempUnits = "Loading";
     string shortForecast = "Loading";
-
+    string weatherIconClass = "";
     string dateString = DateTime.Now.ToString("dd MMM");
 
     protected override async Task OnInitializedAsync()
@@ -134,14 +135,39 @@ using System.Text;
             {
                 if(forecast.properties.periods != null)
                 {
-                    if (!(forecast.properties.periods[0].isDaytime))
-                    {
-                        isDay = "night";
-                    }
+                    //if (!(forecast.properties.periods[0].isDaytime))
+                    //{
+                    //    isDay = "night";
+                    //}
 
                     temp = forecast.properties.periods[0].temperature.ToString();
                     tempUnits = forecast.properties.periods[0].temperatureUnit;
                     shortForecast = forecast.properties.periods[0].shortForecast;
+
+                    if (!(forecast.properties.periods[0].isDaytime))
+                    {
+                        if (iconClass.NightWeatherDescription.ContainsKey(shortForecast))
+                        {
+                            weatherIconClass = iconClass.NightWeatherDescription[shortForecast];
+                        }
+                        else
+                        {
+                            weatherIconClass = iconClass.NightWeatherDescription["KeyNotFound"];
+                        }
+                    }
+                    else
+                    {
+                        if (iconClass.DayWeatherDescription.ContainsKey(shortForecast))
+                        {
+                            weatherIconClass = iconClass.DayWeatherDescription[shortForecast];
+                        }
+                        else
+                        {
+                            weatherIconClass = iconClass.DayWeatherDescription["KeyNotFound"];
+                        }
+                    }
+
+
                 }
             }
         }

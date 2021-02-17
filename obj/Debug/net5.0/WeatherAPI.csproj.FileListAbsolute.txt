@@ -76,3 +76,4 @@ C:\Users\lhotchkiss\source\repos\WeatherAPI\obj\Debug\net5.0\WeatherAPI.dll
 C:\Users\lhotchkiss\source\repos\WeatherAPI\obj\Debug\net5.0\ref\WeatherAPI.dll
 C:\Users\lhotchkiss\source\repos\WeatherAPI\obj\Debug\net5.0\WeatherAPI.pdb
 C:\Users\lhotchkiss\source\repos\WeatherAPI\obj\Debug\net5.0\WeatherAPI.genruntimeconfig.cache
+C:\Users\lhotchkiss\source\repos\WeatherAPI\obj\Debug\net5.0\WeatherAPI.csprojAssemblyReference.cache
