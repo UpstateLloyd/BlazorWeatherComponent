@@ -5,22 +5,29 @@
 
 <h1>Weather forecast</h1>
 
-
-<article class="widget">
-    <div class="weatherIcon"><i class="wi @weatherIconClass"></i></div>
-    <div class="weatherInfo">
-        <div class="temperature">
-        <ul class="list-unstyled list-group">
-            <li class="text-fine position-widget-label">High of</li>
-            <li>@temp&deg;@tempUnits</li>
-        </ul>
+<article class="widget-wrapper">
+    <div class="widget">
+        <div class="widget-top-row">
+            <div class="temp">
+                <ul class="list-unstyled list-group">
+                    <li class="text-fine position-widget-label garafont">High of</li>
+                    <li class="text-large garafont">@temp&deg;</li>
+                </ul>
             </div>
-        <div class="description">
-            <div class="weatherCondition">@shortForecast</div>
-            <div class="place">Warsaw, New York</div>
+            <div class="desc">
+                <div class="weatherCondition garafont bold">@shortForecast</div>
+                <div class="place garafont bold">Warsaw, NY</div>
+            </div>
+        </div>
+        <div class="widget-bottom-row">
+            <div class="the-date alpacafont bold">
+                @dateString
+            </div>
         </div>
     </div>
-    <div class="date">@dateString</div>
+    <div class="weather-icon">
+        <i class="wi @weatherIconClass"></i>
+    </div>
 </article>
 
 
@@ -38,10 +45,11 @@
     string tempUnits = "Loading";
     string shortForecast = "Loading";
     string weatherIconClass = "";
-    string dateString = DateTime.Now.ToString("dd MMM");
+    string dateString = DateTime.Now.ToString("MMMM dd, yyyy");
 
     protected override async Task OnInitializedAsync()
     {
+
         forecast = await forecastService.GetForecastAsync();
         if (forecast != null)
         {
@@ -49,10 +57,7 @@
             {
                 if(forecast.properties.periods != null)
                 {
-                    //if (!(forecast.properties.periods[0].isDaytime))
-                    //{
-                    //    isDay = "night";
-                    //}
+                    bool iconFound = false;
 
                     temp = forecast.properties.periods[0].temperature.ToString();
                     tempUnits = forecast.properties.periods[0].temperatureUnit;
@@ -66,7 +71,19 @@
                         }
                         else
                         {
-                            weatherIconClass = iconClass.NightWeatherDescription["KeyNotFound"];
+                            foreach (var substring in shortForecast.Split(" "))
+                            {
+                                if (iconClass.NightWeatherDescription.ContainsKey(substring))
+                                {
+                                    weatherIconClass = iconClass.NightWeatherDescription[substring];
+                                    iconFound = true;
+                                }                                
+                            }
+                            if (!iconFound)
+                            {
+                                weatherIconClass = iconClass.NightWeatherDescription["KeyNotFound"];
+                            }
+
                         }
                     }
                     else
@@ -77,11 +94,21 @@
                         }
                         else
                         {
-                            weatherIconClass = iconClass.DayWeatherDescription["KeyNotFound"];
+                            foreach (var substring in shortForecast.Split(" "))
+                            {
+                                if (iconClass.DayWeatherDescription.ContainsKey(substring))
+                                {
+                                    weatherIconClass = iconClass.DayWeatherDescription[substring];
+                                    iconFound = true;
+                                }
+                            }
+
+                            if (!iconFound)
+                            {
+                                weatherIconClass = iconClass.DayWeatherDescription["KeyNotFound"];
+                            }
                         }
                     }
-
-
                 }
             }
         }

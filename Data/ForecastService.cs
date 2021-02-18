@@ -9,11 +9,6 @@ namespace WeatherAPI.Data
 {
     public class ForecastService
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         public async Task<ForecastModel> GetForecastAsync()
         {
             var client = new RestClient("https://api.weather.gov/gridpoints/BUF/61,42/forecast");

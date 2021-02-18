@@ -41,8 +41,6 @@
     height: 300px;
     width: 600px;
     transform: translate(-50%, -50%);
-    /*box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
-    grid-template-columns: 1fr;*/
     grid-template-rows: 150px 150px;
     padding: 0;
     margin: 0;

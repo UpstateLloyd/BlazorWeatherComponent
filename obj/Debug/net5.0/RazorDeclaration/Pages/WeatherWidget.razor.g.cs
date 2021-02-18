@@ -112,10 +112,11 @@ using System.Text;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\WeatherWidget.razor"
+#line 37 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\WeatherWidget.razor"
        
 
     ForecastModel forecast = new ForecastModel();
+    
     ForecastService forecastService = new ForecastService();
     WeatherDefinitions iconClass = new WeatherDefinitions();
 
@@ -124,10 +125,11 @@ using System.Text;
     string tempUnits = "Loading";
     string shortForecast = "Loading";
     string weatherIconClass = "";
-    string dateString = DateTime.Now.ToString("dd MMM");
+    string dateString = DateTime.Now.ToString("MMMM dd, yyyy");
 
     protected override async Task OnInitializedAsync()
     {
+
         forecast = await forecastService.GetForecastAsync();
         if (forecast != null)
         {
@@ -139,6 +141,7 @@ using System.Text;
                     //{
                     //    isDay = "night";
                     //}
+                    bool iconFound = false;
 
                     temp = forecast.properties.periods[0].temperature.ToString();
                     tempUnits = forecast.properties.periods[0].temperatureUnit;
@@ -152,7 +155,19 @@ using System.Text;
                         }
                         else
                         {
-                            weatherIconClass = iconClass.NightWeatherDescription["KeyNotFound"];
+                            foreach (var substring in shortForecast.Split(" "))
+                            {
+                                if (iconClass.NightWeatherDescription.ContainsKey(substring))
+                                {
+                                    weatherIconClass = iconClass.NightWeatherDescription[substring];
+                                    iconFound = true;
+                                }                                
+                            }
+                            if (!iconFound)
+                            {
+                                weatherIconClass = iconClass.NightWeatherDescription["KeyNotFound"];
+                            }
+
                         }
                     }
                     else
@@ -163,7 +178,19 @@ using System.Text;
                         }
                         else
                         {
-                            weatherIconClass = iconClass.DayWeatherDescription["KeyNotFound"];
+                            foreach (var substring in shortForecast.Split(" "))
+                            {
+                                if (iconClass.DayWeatherDescription.ContainsKey(substring))
+                                {
+                                    weatherIconClass = iconClass.DayWeatherDescription[substring];
+                                    iconFound = true;
+                                }
+                            }
+
+                            if (!iconFound)
+                            {
+                                weatherIconClass = iconClass.DayWeatherDescription["KeyNotFound"];
+                            }
                         }
                     }
 

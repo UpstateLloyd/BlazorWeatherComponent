@@ -5,8 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\Alpaca Scarlett Demo.ttf" />
+    <None Include="wwwroot\css\EBGaramond-VariableFont_wght.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="RestSharp" Version="106.11.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>
