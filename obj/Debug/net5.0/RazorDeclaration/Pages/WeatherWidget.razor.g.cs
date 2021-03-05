@@ -116,7 +116,6 @@ using System.Text;
        
 
     ForecastModel forecast = new ForecastModel();
-    
     ForecastService forecastService = new ForecastService();
     WeatherDefinitions iconClass = new WeatherDefinitions();
 
@@ -137,10 +136,6 @@ using System.Text;
             {
                 if(forecast.properties.periods != null)
                 {
-                    //if (!(forecast.properties.periods[0].isDaytime))
-                    //{
-                    //    isDay = "night";
-                    //}
                     bool iconFound = false;
 
                     temp = forecast.properties.periods[0].temperature.ToString();
@@ -193,8 +188,6 @@ using System.Text;
                             }
                         }
                     }
-
-
                 }
             }
         }

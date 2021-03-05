@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'MyAlpacaFont';
+    src: url('Alpaca\ Scarlett\ Demo.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'MyGaramondFont';
+    src: url('EBGaramond-VariableFont_wght.ttf') format('truetype')
+}
+
+.position-widget-label {
+    position: relative;
+    top: 15px;    
+}
+
+.text-fine {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    font-family: ga;
+}
+
+.text-large {
+    font-size: 5rem;
+}
+
+.position-widget-label {
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+
+.widget-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 600px;
+}
+
+.widget {
+    display: grid;
+    height: 300px;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    grid-template-rows: 150px 150px;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.widget-top-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    background-color: #E4EEBD;
+}
+
+.widget-bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    border: 10px solid white;
+    height: 150px;
+    background-color: #e6e7e8;
+    ;
+}
+
+.temp {
+    background-color: #E4EEBD;
+    justify-self: center;
+}
+
+.desc {
+    grid-column: span 2;
+    background-color: #E4EEBD;
+}
+
+.the-date {
+    position: relative;
+    right: 15%;
+    padding: 0;
+    margin: 0;
+    grid-column: span 3;
+    font-size: 40px;
+}
+
+.weather-icon {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -110%;
+    left: 25%;
+    color: #fff;
+    background-color: #006d5b;
+    height: 212px;
+    width: 212px;
+    border-radius: 112px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+    border: 10px solid white;
+}
+
+.place {
+    position: relative;
+    left: 25%;
+}
+
+.weather-icon i {
+    font-size: 100px;
+}
+
+.weatherCondition,
+.place {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.alpacafont {
+    font-family: MyAlpacaFont;
+}
+
+.garafont {
+    font-family: MyGaramondFont;
+}
+
+.bold {
+    font-weight: bold;
+}
