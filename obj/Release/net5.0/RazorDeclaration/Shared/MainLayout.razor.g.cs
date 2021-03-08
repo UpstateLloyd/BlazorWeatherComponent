@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace WeatherAPI.Pages
+namespace WeatherAPI.Shared
 {
     #line hidden
     using System;
@@ -13,113 +13,82 @@ namespace WeatherAPI.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 1 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 2 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 3 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 4 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 5 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 6 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 7 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 8 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 9 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using WeatherAPI;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 10 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using WeatherAPI.Shared;
 
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\FetchData.razor"
-using WeatherAPI.Models;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\FetchData.razor"
-using WeatherAPI.Data;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 34 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\FetchData.razor"
-       
-
-    ForecastModel forecast = new ForecastModel();
-    ForecastService forecastService = new ForecastService();
-
-    protected override async Task OnInitializedAsync()
-    {
-        forecast = await forecastService.GetForecastAsync();
-    }
-
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

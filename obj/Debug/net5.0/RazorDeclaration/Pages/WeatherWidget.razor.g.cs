@@ -13,91 +13,91 @@ namespace WeatherAPI.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 1 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 2 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 3 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 4 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 5 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 6 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 7 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 8 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 9 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using WeatherAPI;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\lhotchkiss\source\repos\WeatherAPI\_Imports.razor"
+#line 10 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\_Imports.razor"
 using WeatherAPI.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\WeatherWidget.razor"
-using WeatherAPI.Data;
+#line 2 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\Pages\WeatherWidget.razor"
+using WeatherAPI.Services;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\WeatherWidget.razor"
+#line 3 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\Pages\WeatherWidget.razor"
 using WeatherAPI.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\WeatherWidget.razor"
+#line 4 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\Pages\WeatherWidget.razor"
 using System.Text;
 
 #line default
@@ -112,15 +112,15 @@ using System.Text;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 37 "C:\Users\lhotchkiss\source\repos\WeatherAPI\Pages\WeatherWidget.razor"
+#line 36 "C:\Users\Vajane\source\repos\BlazorWeatherComponent\Pages\WeatherWidget.razor"
        
 
-    ForecastModel forecast = new ForecastModel();
-    ForecastService forecastService = new ForecastService();
-    WeatherDefinitions iconClass = new WeatherDefinitions();
+    ForecastModel _forecast = new ForecastModel();
+    WeatherService _weatherservice = new WeatherService();
+    WeatherModel _iconclass = new WeatherModel();
 
     //string isDay = "day";
-    string temp = "Loading" ;
+    string temp = "Loading";
     string tempUnits = "Loading";
     string shortForecast = "Loading";
     string weatherIconClass = "";
@@ -128,63 +128,62 @@ using System.Text;
 
     protected override async Task OnInitializedAsync()
     {
-
-        forecast = await forecastService.GetForecastAsync();
-        if (forecast != null)
+        _forecast = await _weatherservice.GetWeatherAsync();
+        if (_forecast != null)
         {
-            if(forecast.properties != null)
+            if (_forecast.properties != null)
             {
-                if(forecast.properties.periods != null)
+                if (_forecast.properties.periods != null)
                 {
                     bool iconFound = false;
 
-                    temp = forecast.properties.periods[0].temperature.ToString();
-                    tempUnits = forecast.properties.periods[0].temperatureUnit;
-                    shortForecast = forecast.properties.periods[0].shortForecast;
+                    temp = _forecast.properties.periods[0].temperature.ToString();
+                    tempUnits = _forecast.properties.periods[0].temperatureUnit;
+                    shortForecast = _forecast.properties.periods[0].shortForecast;
 
-                    if (!(forecast.properties.periods[0].isDaytime))
+                    if (!(_forecast.properties.periods[0].isDaytime))
                     {
-                        if (iconClass.NightWeatherDescription.ContainsKey(shortForecast))
+                        if (_iconclass.NightWeatherDescription.ContainsKey(shortForecast))
                         {
-                            weatherIconClass = iconClass.NightWeatherDescription[shortForecast];
+                            weatherIconClass = _iconclass.NightWeatherDescription[shortForecast];
                         }
                         else
                         {
                             foreach (var substring in shortForecast.Split(" "))
                             {
-                                if (iconClass.NightWeatherDescription.ContainsKey(substring))
+                                if (_iconclass.NightWeatherDescription.ContainsKey(substring))
                                 {
-                                    weatherIconClass = iconClass.NightWeatherDescription[substring];
+                                    weatherIconClass = _iconclass.NightWeatherDescription[substring];
                                     iconFound = true;
-                                }                                
+                                }
                             }
                             if (!iconFound)
                             {
-                                weatherIconClass = iconClass.NightWeatherDescription["KeyNotFound"];
+                                weatherIconClass = _iconclass.NightWeatherDescription["KeyNotFound"];
                             }
 
                         }
                     }
                     else
                     {
-                        if (iconClass.DayWeatherDescription.ContainsKey(shortForecast))
+                        if (_iconclass.DayWeatherDescription.ContainsKey(shortForecast))
                         {
-                            weatherIconClass = iconClass.DayWeatherDescription[shortForecast];
+                            weatherIconClass = _iconclass.DayWeatherDescription[shortForecast];
                         }
                         else
                         {
                             foreach (var substring in shortForecast.Split(" "))
                             {
-                                if (iconClass.DayWeatherDescription.ContainsKey(substring))
+                                if (_iconclass.DayWeatherDescription.ContainsKey(substring))
                                 {
-                                    weatherIconClass = iconClass.DayWeatherDescription[substring];
+                                    weatherIconClass = _iconclass.DayWeatherDescription[substring];
                                     iconFound = true;
                                 }
                             }
 
                             if (!iconFound)
                             {
-                                weatherIconClass = iconClass.DayWeatherDescription["KeyNotFound"];
+                                weatherIconClass = _iconclass.DayWeatherDescription["KeyNotFound"];
                             }
                         }
                     }

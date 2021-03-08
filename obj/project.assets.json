@@ -78,19 +78,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lhotchkiss\\.nuget\\packages\\": {}
+    "C:\\Users\\Vajane\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\WeatherAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Vajane\\source\\repos\\BlazorWeatherComponent\\WeatherAPI.csproj",
       "projectName": "WeatherAPI",
-      "projectPath": "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\WeatherAPI.csproj",
-      "packagesPath": "C:\\Users\\lhotchkiss\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lhotchkiss\\source\\repos\\WeatherAPI\\obj\\",
+      "projectPath": "C:\\Users\\Vajane\\source\\repos\\BlazorWeatherComponent\\WeatherAPI.csproj",
+      "packagesPath": "C:\\Users\\Vajane\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vajane\\source\\repos\\BlazorWeatherComponent\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\lhotchkiss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vajane\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -143,7 +147,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

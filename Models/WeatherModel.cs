@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherAPI.Models
 {
-    public class WeatherDefinitions
+    public class WeatherModel
     {
       public Dictionary<string,string> DayWeatherDescription = new Dictionary<string, string>() 
       {
