@@ -15,7 +15,7 @@ namespace WeatherAPI.Services
     {
         public async Task<UserGeolocationModel> GetLocationAsync(string userIP)
         {
-            string api_key = "f5f3dea5dfce7dadbc84d572449d17b4";
+            string api_key = ;
             var client = new RestClient("http://api.ipstack.com/" + userIP + "?access_key=" + api_key);
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
